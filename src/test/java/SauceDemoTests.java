@@ -11,6 +11,7 @@ public class SauceDemoTests extends Base{
     String username = "standard_user";
     String password = "secret_sauce";
     //Test
+    //nesto drugo
 
     @BeforeMethod
     public void setup(){
@@ -35,7 +36,7 @@ public class SauceDemoTests extends Base{
         Assert.assertEquals(Double.valueOf(cenaUKorpi),Double.valueOf(cena.substring(1,6)));
 
         driver.findElement(By.cssSelector(".btn_action.checkout_button")).click();
-
+        String password2 = "secret_sauce";
         driver.findElement(By.cssSelector("#first-name")).sendKeys("NekoIme");
         driver.findElement(By.cssSelector("#last-name")).sendKeys("NekoPrezime");
         driver.findElement(By.cssSelector("#postal-code")).sendKeys("11000");
