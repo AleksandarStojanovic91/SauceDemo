@@ -32,13 +32,15 @@ public class SauceDemoTests extends Base{
         Assert.assertEquals(naziv,nazivUKorpi);
         Assert.assertEquals(cena,"$"+cenaUKorpi);
         Assert.assertEquals(Double.valueOf(cenaUKorpi),Double.valueOf(cena.substring(1,6)));
+        Assert.assertEquals(cena,"$"+cenaUKorpi);
 
         driver.findElement(By.cssSelector(".btn_action.checkout_button")).click();
 
-        driver.findElement(By.cssSelector("#first-name")).sendKeys("NekoIme");
-        driver.findElement(By.cssSelector("#last-name")).sendKeys("NekoPrezime");
         driver.findElement(By.cssSelector("#postal-code")).sendKeys("11000");
         driver.findElement(By.cssSelector(".btn_primary.cart_button")).click();
+        driver.findElement(By.cssSelector("#first-name")).sendKeys("NekoIme");
+        driver.findElement(By.cssSelector("#last-name")).sendKeys("NekoPrezime");
+
 
         driver.findElement(By.cssSelector(".btn_action.cart_button")).click();
 
@@ -46,6 +48,6 @@ public class SauceDemoTests extends Base{
     }
     @AfterMethod
     public void tearDown(){
-        driver.quit();
+        driver.close()
     }
 }
