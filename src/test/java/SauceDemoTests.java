@@ -10,7 +10,7 @@ public class SauceDemoTests extends Base{
     String URL = "https://www.saucedemo.com/";
     String username = "standard_user";
     String password = "secret_sauce";
-    //
+    //Test
 
     @BeforeMethod
     public void setup(){
